@@ -3,3 +3,5 @@
 .album-art .official-cover{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:3}.album-art.has-official-cover .album-artist,.album-art.has-official-cover .album-title,.album-art.has-official-cover .album-detail,.album-art.has-official-cover .album-swirl{visibility:hidden}
 
 .release-ear-candy{position:relative;background:linear-gradient(140deg,#efefef,#666)}.release-ear-candy .catalog-cover{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:2}.release-ear-candy .release-mark{font-size:clamp(30px,4vw,65px)}
+
+.release-visual{position:relative}.release-visual>.catalog-cover{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:2}
