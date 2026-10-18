@@ -10,3 +10,12 @@
 
 /* CONTINUUM product screenshot alongside its introduction */
 .continuum-inner{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);column-gap:7%;align-items:center}.continuum-inner>.eyebrow,.continuum-inner>h2,.continuum-inner>p:not(.eyebrow),.continuum-inner>.continuum-status{grid-column:1}.continuum-screenshot{grid-column:2;grid-row:1 / span 5;min-width:0;z-index:2}.continuum-screenshot img{display:block;width:100%;height:auto;border:1px solid rgba(217,189,139,.3);box-shadow:0 30px 90px #0007}.continuum h2{font-size:clamp(60px,7vw,125px)}@media(max-width:720px){.continuum-inner{display:flex;flex-direction:column;align-items:stretch}.continuum-screenshot{order:4;margin-top:32px}.continuum h2{font-size:clamp(67px,14vw,105px)}}
+
+/* Alignment correction: prevent long CONTINUUM heading from crossing image column. */
+.continuum-inner{display:grid;grid-template-columns:minmax(0, .95fr) minmax(0,1.05fr);gap:clamp(28px,5vw,88px);align-items:center}
+.continuum-copy{grid-column:1;grid-row:1;min-width:0;position:relative;z-index:2}
+.continuum-copy h2{font-size:clamp(42px,5.2vw,80px);line-height:1.02;letter-spacing:-.055em;overflow-wrap:anywhere}
+.continuum-copy h2 em{font-size:.78em;letter-spacing:-.05em}
+.continuum-screenshot{grid-column:2;grid-row:1;min-width:0;width:100%;align-self:center}
+.continuum-screenshot img{display:block;width:100%;height:auto;object-fit:contain}
+@media(max-width:920px){.continuum-inner{grid-template-columns:1fr;gap:32px}.continuum-copy{grid-column:1;grid-row:1}.continuum-screenshot{grid-column:1;grid-row:2;margin-top:0}.continuum-copy h2{font-size:clamp(48px,10vw,88px)}.continuum-copy h2 em{font-size:.78em}}
