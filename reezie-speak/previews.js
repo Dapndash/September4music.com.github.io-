@@ -1,9 +1,9 @@
 // REEZIE SPEAK audio previews — show only hosted playable previews.
 document.addEventListener('DOMContentLoaded', async () => {
   const tracks = [
-    { title:'LOSE YOU', artist:'REEZIE REEZ', files:['LOSE_YOU_30_SEC_PREVIEW.mp3'] },
-    { title:'THE DREAM MAKER (SUPADOPESEX EDIT)', artist:'REEZIE REEZ', files:['THE_DREAM_MAKER_SUPADOPESEX_APPROVED_30_SEC_PREVIEW.mp3','THE_DREAM_MAKER_SUPADOPESEX_30_SEC_PREVIEW.mp3'] },
-    { title:"IT'S OUR 1ST CHRISTMAS", artist:'REEZIE REEZ feat. CG Saint', files:['ITS_OUR_1ST_CHRISTMAS_30_SEC_PREVIEW.mp3'] }
+    { title:'LOSE YOU', artist:'REEZIE REEZ', files:['LOSE_YOU_30_SEC_PREVIEW.wav'] },
+    { title:'THE DREAM MAKER (SUPADOPESEX EDIT)', artist:'REEZIE REEZ', files:['THE_DREAM_MAKER_SUPADOPESEX_30_SEC_PREVIEW.wav'] },
+    { title:"IT'S OUR 1ST CHRISTMAS", artist:'REEZIE REEZ feat. CG Saint', files:['ITS_OUR_1ST_CHRISTMAS_30_SEC_PREVIEW.wav'] }
   ];
   const base = new URL('./', document.baseURI);
   const checked = await Promise.all(tracks.map(async t => {
