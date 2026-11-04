@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const tracks = [
     {title:'LOSE YOU',artist:'REEZIE REEZ',file:'LOSE_YOU_30_SEC_PREVIEW.wav'},
     {title:'THE DREAM MAKER (SUPADOPESEX EDIT)',artist:'REEZIE REEZ',file:'THE_DREAM_MAKER_SUPADOPESEX_30_SEC_PREVIEW.wav'},
-    {title:"IT'S OUR 1ST CHRISTMAS",artist:'REEZIE REEZ feat. CG Saint',file:'ITS_OUR_1ST_CHRISTMAS_30_SEC_PREVIEW.wav'}
+    {title:"IT'S OUR 1ST CHRISTMAS",artist:'REEZIE REEZ',file:'ITS_OUR_1ST_CHRISTMAS_30_SEC_PREVIEW.wav'}
   ];
   if (document.getElementById('reezie-audio-previews')) return;
   const panel = document.createElement('section');
@@ -30,6 +30,6 @@ document.addEventListener('DOMContentLoaded', () => {
     block.append(name,credit,audio);
     panel.append(block);
   });
-  const footer=document.querySelector('main footer');
-  if (footer) footer.before(panel); else document.querySelector('main')?.append(panel);
+  const album=document.getElementById('complete-album');
+  if (album) album.before(panel); else document.querySelector('main footer')?.before(panel);
 });
