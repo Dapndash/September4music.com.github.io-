@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DIRTY WALLS (Pt. 1) — REEZIE REEZ | SEPTEMBER 4 MUSIC</title>
+<meta name="description" content="Hear a 30-second preview of DIRTY WALLS (Pt. 1) by REEZIE REEZ, then buy the digital single directly from SEPTEMBER 4 MUSIC on Payhip.">
+<meta property="og:title" content="DIRTY WALLS (Pt. 1) — REEZIE REEZ">
+<meta property="og:description" content="Hear the 30-second preview. Buy the digital single for $1.29.">
+<meta property="og:image" content="https://payhip.com/cdn-cgi/image/format=auto,width=1500/https://pe56d.s3.amazonaws.com/o_1k8292c691l001qle1ni9q4r1el71f.jpeg">
+<meta name="theme-color" content="#100b08">
+<style>
+:root{color-scheme:dark;--gold:#e6b85f;--cream:#fff1d3;--muted:#d0c4af}
+*{box-sizing:border-box}
+body{margin:0;min-height:100vh;background:radial-gradient(ellipse at 75% 10%,#513218 0,transparent 48%),linear-gradient(145deg,#090807,#1b120a 58%,#090807);color:var(--cream);font:16px/1.55 system-ui,-apple-system,Segoe UI,sans-serif}
+.wrap{width:min(1040px,100% - 36px);margin:auto}
+header{padding:20px 0;border-bottom:1px solid #e6b85f55;text-align:center}
+header a{color:var(--gold);text-decoration:none;letter-spacing:.22em;font-size:12px;font-weight:800}
+main{padding:clamp(24px,5vw,56px) 0}
+.product{display:grid;grid-template-columns:minmax(260px,1fr) minmax(300px,1fr);gap:clamp(28px,5vw,64px);align-items:center}
+.cover{display:block;width:100%;height:auto;box-shadow:0 20px 70px #000b;border:1px solid #e6b85f88}
+.kicker{margin:0;color:var(--gold);font-size:12px;font-weight:800;letter-spacing:.22em}
+h1{font:clamp(42px,7vw,76px)/.95 Georgia,'Times New Roman',serif;letter-spacing:.015em;margin:14px 0 8px}
+.artist{color:var(--gold);letter-spacing:.3em;font-size:14px;font-weight:700}
+.subhead{margin:30px 0 10px;font-size:13px;letter-spacing:.15em;color:var(--muted);font-weight:700}
+audio{display:block;width:100%;height:48px;margin:0 0 10px;accent-color:var(--gold)}
+.status{min-height:24px;color:var(--muted);font-size:13px}
+.buy{display:block;margin-top:14px;padding:16px 22px;background:linear-gradient(135deg,#f7d78c,#d69a37);color:#160e06;text-align:center;text-decoration:none;font-size:16px;font-weight:900;letter-spacing:.08em;border:1px solid #ffe5a9;box-shadow:0 8px 28px #0007}
+.buy:hover,.buy:focus-visible{background:#fff0c5;outline:2px solid white;outline-offset:3px}
+.note{color:var(--muted);font-size:13px;margin:14px 0 0}
+footer{border-top:1px solid #e6b85f55;padding:20px 0 28px;text-align:center;color:var(--muted);font:12px/1.6 Georgia,serif}
+@media(max-width:700px){.wrap{width:min(520px,100% - 28px)}.product{grid-template-columns:1fr;gap:26px}.cover{max-width:430px;margin:auto}h1{font-size:clamp(42px,12vw,64px)}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header><a href="https://september4music.com/">SEPTEMBER 4 MUSIC, LLC</a></header>
+<main>
+<section class="product" aria-labelledby="title">
+<img class="cover" src="https://payhip.com/cdn-cgi/image/format=auto,width=1500/https://pe56d.s3.amazonaws.com/o_1k8292c691l001qle1ni9q4r1el71f.jpeg" alt="DIRTY WALLS (Pt. 1) cover art by REEZIE REEZ">
+<div>
+<p class="kicker">A REEZIE REEZ SINGLE</p>
+<h1 id="title">DIRTY WALLS<br>(Pt. 1)</h1>
+<div class="artist">REEZIE REEZ</div>
+<p class="subhead">LISTEN TO THE 30-SECOND PREVIEW</p>
+<audio id="preview" controls preload="none" aria-label="30-second preview of DIRTY WALLS (Pt. 1)"></audio>
+<div id="status" class="status" role="status">Loading preview…</div>
+<a class="buy" href="https://payhip.com/buy?s=1&amp;cart_links%5B%5D=pUubv&amp;qty%5BpUubv%5D=1" target="_blank" rel="noopener">BUY NOW — $1.29</a>
+<p class="note">Continue to Payhip secure checkout and download the WAV master after purchase.</p>
+</div>
+</section>
+</main>
+<footer>© ℗ 2026 SEPTEMBER 4 MUSIC, LLC. All rights reserved.</footer>
+</div>
+<script>
+(async()=>{const player=document.getElementById("preview"),status=document.getElementById("status");try{const response=await fetch("preview.mp3.b64");if(!response.ok)throw new Error("Preview unavailable");const encoded=(await response.text()).trim();const binary=atob(encoded);const bytes=new Uint8Array(binary.length);for(let i=0;i<binary.length;i++)bytes[i]=binary.charCodeAt(i);player.src=URL.createObjectURL(new Blob([bytes],{type:"audio/mpeg"}));status.textContent="Preview ready.";player.addEventListener("timeupdate",()=>{if(player.currentTime>=30){player.pause();player.currentTime=0}})}catch(error){status.textContent="Preview is temporarily unavailable. Use the Buy Now button to continue to Payhip."}})();
+</script>
+</body>
+</html>
