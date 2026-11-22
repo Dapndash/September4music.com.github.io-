@@ -43,9 +43,9 @@ footer{border-top:1px solid #e6b85f55;padding:20px 0 28px;text-align:center;colo
 <h1 id="title">DIRTY WALLS<br>(Pt. 1)</h1>
 <div class="artist">REEZIE REEZ</div>
 <p class="subhead">LISTEN TO THE 30-SECOND PREVIEW</p>
-<audio id="preview" controls preload="none" aria-label="30-second preview of DIRTY WALLS (Pt. 1)"></audio>
+<audio id="preview" controls preload="metadata" aria-label="30-second preview of DIRTY WALLS (Pt. 1)"></audio>
 <div id="status" class="status" role="status">Loading preview…</div>
-<a class="buy" href="https://payhip.com/b/pUubv" target="_blank" rel="noopener">BUY NOW — $1.29</a>
+<a class="buy" href="https://payhip.com/buy?s=1&amp;cart_links%5B%5D=pUubv&amp;qty%5BpUubv%5D=1" target="_blank" rel="noopener">BUY NOW — $1.29</a>
 <p class="note">Continue to Payhip to complete your purchase and download the WAV master.</p>
 </div>
 </section>
@@ -53,7 +53,7 @@ footer{border-top:1px solid #e6b85f55;padding:20px 0 28px;text-align:center;colo
 <footer>© ℗ 2026 SEPTEMBER 4 MUSIC, LLC. All rights reserved.</footer>
 </div>
 <script>
-(async()=>{const player=document.getElementById("preview"),status=document.getElementById("status");try{const response=await fetch("preview.mp3.b64");if(!response.ok)throw new Error("Preview unavailable");const encoded=(await response.text()).trim();const binary=atob(encoded);const bytes=new Uint8Array(binary.length);for(let i=0;i<binary.length;i++)bytes[i]=binary.charCodeAt(i);player.src=URL.createObjectURL(new Blob([bytes],{type:"audio/mpeg"}));status.textContent="Preview ready.";player.addEventListener("timeupdate",()=>{if(player.currentTime>=30){player.pause();player.currentTime=0}})}catch(error){status.textContent="Preview is temporarily unavailable. Use the Buy Now button to continue to Payhip."}})();
+(()=>{const player=document.getElementById("preview"),status=document.getElementById("status");player.addEventListener("loadedmetadata",()=>{status.textContent="Preview ready.";});player.addEventListener("error",()=>{status.textContent="Preview is temporarily unavailable. Use the Buy Now button to continue to Payhip.";});player.addEventListener("timeupdate",()=>{if(player.currentTime>=30){player.pause();player.currentTime=0;status.textContent="30-second preview complete.";}});(async()=>{try{const response=await fetch("preview.mp3.b64",{cache:"no-store"});if(!response.ok)throw new Error("Preview asset unavailable");const encoded=(await response.text()).replace(/\\s/g,"");const raw=atob(encoded);const bytes=new Uint8Array(raw.length);for(let i=0;i<raw.length;i++)bytes[i]=raw.charCodeAt(i);player.src=URL.createObjectURL(new Blob([bytes],{type:"audio/mpeg"}));player.load();}catch(error){status.textContent="Preview is temporarily unavailable. Use the Buy Now button to continue to Payhip.";}})();})();
 </script>
 </body>
 </html>
